@@ -1,0 +1,22 @@
+{
+  "name": "the-web-without-javascript",
+  "version": 2,
+  "alias": [
+    "the-web-without-javascript.now.sh"
+  ],
+  "builds": [
+    {
+      "src": "presentation/**/*",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "status": 301,
+      "headers": {
+        "Location": "./presentation/"
+      }
+    }
+  ]
+}
